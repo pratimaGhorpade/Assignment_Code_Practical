@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="LEAP Test-Automation-DM" parallel="tests" thread-count="1" >
+	<listeners>
+		<listener class-name="com.absli.Listner.CustomListner"/>
+	</listeners>
+
+
+	
+ <test name="Suite Test1">
+		<classes>
+			<class name="com.absli.testcases.LoginPageTest" >
+				<methods>
+					<include name="demo5"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+</suite>
