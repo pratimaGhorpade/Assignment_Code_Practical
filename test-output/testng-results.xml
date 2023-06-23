@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-22T12:41:50Z" name="Default suite" finished-at="2023-06-22T12:42:04Z" duration-ms="14177">
+    <groups>
+      <group name="web">
+        <method signature="DemoTest.automationdemo()[pri:0, instance:com.absli.testcases.DemoTest@e383572]" name="automationdemo" class="com.absli.testcases.DemoTest"/>
+      </group> <!-- web -->
+    </groups>
+    <test started-at="2023-06-22T12:41:50Z" name="Default test" finished-at="2023-06-22T12:42:04Z" duration-ms="14177">
+      <class name="com.absli.testcases.DemoTest">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:com.absli.testcases.DemoTest@e383572]" started-at="2023-06-22T18:11:50Z" name="preSetup" finished-at="2023-06-22T18:11:58Z" duration-ms="8165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.absli.testcases.DemoTest@e383572]" started-at="2023-06-22T18:11:58Z" name="setUp" finished-at="2023-06-22T18:11:58Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="automationdemo()[pri:0, instance:com.absli.testcases.DemoTest@e383572]" started-at="2023-06-22T18:11:58Z" name="automationdemo" finished-at="2023-06-22T18:11:59Z" duration-ms="1304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- automationdemo -->
+        <test-method is-config="true" signature="endReport(org.testng.ITestResult)[pri:0, instance:com.absli.testcases.DemoTest@e383572]" started-at="2023-06-22T18:11:59Z" name="endReport" finished-at="2023-06-22T18:12:03Z" duration-ms="4028" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=automationdemo status=SUCCESS method=DemoTest.automationdemo()[pri:0, instance:com.absli.testcases.DemoTest@e383572] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.absli.testcases.DemoTest@e383572]" started-at="2023-06-22T18:12:03Z" name="tearDown" finished-at="2023-06-22T18:12:04Z" duration-ms="652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.absli.testcases.DemoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

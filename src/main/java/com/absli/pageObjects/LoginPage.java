@@ -15,6 +15,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.NoSuchElementException;
 
+import org.apache.bcel.generic.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,50 +45,142 @@ public class LoginPage extends TestBase {
 	
 	
 	public void enterUserNameweb() {
-		WebElement userNM=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@placeholder='Username']"));
-		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), userNM, 50,"time out to find element on page");
-		userNM.sendKeys("PratimaGhorpade");
-		ExtentFactory.getInstance().getExtent().log(Status.INFO,"Enter user name"+"PratimaGhorpade");
+		WebElement UserName=driver.findElement(By.xpath("//input[@name='user-name']"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), UserName, 50,"time out to find element on page");
+		UserName.sendKeys("standard_user");
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO,"Enter user name"+"standard_user");
 	}
 	
 	public void enterEmailweb() {
 		WebElement email=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@placeholder='Email']"));
 		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), email, 50,"time out to find element on page");
 		email.sendKeys("pratima.ghorpade123@gmail.com");
-		ExtentFactory.getInstance().getExtent().log(Status.INFO,"Enter Email"+"pratima.ghorpade123@gmail.com");
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO,"Enter Email"+"pratima.ghorpade123@gmail.com");
 	}
 
 	public void enterpasswordweb() {
-		WebElement PassNM=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
-		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), PassNM, 30,"time out to find element on page");
-		PassNM.sendKeys("Swami@123");
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter Password TextBox=====>"+"Swami@123");
+		WebElement PassNM=driver.findElement(By.xpath("//input[@name='password']"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), PassNM, 50,"time out to find element on page");
+		PassNM.sendKeys("secret_sauce");
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter Password TextBox=====>"+"secret_sauce");
 
 	}
 
 	
-	public void enterpasswordWeb() {
-		WebElement PassNM=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
-		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), PassNM, 30,"time out to find element on page");
-		PassNM.sendKeys("Swami@123");
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter Password TextBox=====>"+"Swami@123");
-
-	}
+//	public void enterpasswordWeb() {
+//		WebElement PassNM=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@placeholder='Password']"));
+//		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), PassNM, 30,"time out to find element on page");
+//		PassNM.sendKeys("Swami@123");
+//		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Enter Password TextBox=====>"+"Swami@123");
+//
+//	}
 	public void submitButtonweb() {
 		WebElement submit=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//button[@type='submit']"));
 		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), submit, 30,"time out to find element on page");
 		submit.click();
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on Submit Button");
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on Submit Button");
 
 	}
 
-	public void clickOnSignButtonweb() {
-		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//a[text()=' Sign in ']"));
+	public void clickOnLoginButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//input[@name='login-button']"));
 		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
 		btn.click();
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on Submit Button");
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO, "click on Login Button");
 
 	}
+	
+	public void clickOnAddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[1]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		
+		btn.click();
+		
+	}
+	
+	public void clickOn2AddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[2]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn3AddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[3]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn4AddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[4]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn5AddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[5]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	public void clickOn6AddToCartButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Add to cart'])[6]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOnRemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[1]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOnDropdownweb() {
+		WebElement dropdown=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//select[@class='product_sort_container']"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), dropdown, 30,"time out to find element on page");
+		dropdown.click();
+	
+	}
+	
+	public void clickOn2RemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[2]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn3RemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[3]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn4RemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[4]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn5RemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[5]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
+	public void clickOn6RemoveButtonweb() {
+		WebElement btn=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("(//button[text()='Remove'])[6]"));
+		wait.waitForElementToBeVisibleweb(WebDriverFactoryStaticThreadLocal.getDriver(), btn, 30,"time out to find element on page");
+		btn.click();
+	
+	}
+	
 	public void VerifyPageTitleweb() {
 		try {
 			WebElement dashboardtext=WebDriverFactoryStaticThreadLocal.getDriver().findElement(By.xpath("//span[text()='Application List']"));
@@ -102,8 +195,8 @@ public class LoginPage extends TestBase {
 			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Element is Not Display On Page");
 		}
 
-
-
+		
+		
 	}
 
 

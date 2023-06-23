@@ -10,14 +10,13 @@
 	
  <test name="Suite Test1">
 		<classes>
-			<class name="com.absli.testcases.LoginPageTest" >
+			<class name="com.absli.testcases.DemoTest" >
 				<methods>
-					<include name="demo5"/>
+					<include name="automationdemo"/>
 				</methods>
 			</class>
 		</classes>
 	</test>
-	
 	
 	
 	
